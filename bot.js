@@ -334,7 +334,7 @@ function play(guild, song) {
 
 
 client.on('message', message => {
-    if (message.author.id !== "410778583682777098") return;
+    if (message.author.id !== "476799148218253313") return;
     if (message.content === 'help') {
       message.react('🎵')
         let helpEmbed = new Discord.RichEmbed()
