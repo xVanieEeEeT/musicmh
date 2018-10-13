@@ -20,7 +20,7 @@ const gif = require("gif-search");
 
 const client = new Discord.Client({disableEveryone: true});
 
-const prefix = "*";
+const prefix = "+";
 /////////////////////////
 ////////////////////////
 
@@ -335,19 +335,18 @@ function play(guild, song) {
 
 client.on('message', message => {
     if (message.author.id !== "476799148218253313") return;
-    if (message.content === 'help') {
+    if (message.content === '+help') {
       message.react('🎵')
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر الميوزك...**')
-        .setDescription('**برفكس البوت -> \'*\'**')
-        .addField('play', 'لتشغيل اغنية')
-        .addField('join', 'دخول رومك الصوتي')
-        .addField('disconnect', 'الخروج من رومك الصوتي')
-        .addField('skip', 'تخطي الأغنية')
-        .addField('pause', 'ايقاف الاغنية مؤقتا')
-        .addField('resume', 'تكملة الاغنية')
-        .addField('queue', 'اظهار قائمة التشغيل')
-        .addField('np', 'اظهار الاغنية اللي انت مشغلها حاليا');
+        .addField('+play', 'لتشغيل اغنية')
+        .addField('+join', 'دخول رومك الصوتي')
+        .addField('+disconnect', 'الخروج من رومك الصوتي')
+        .addField('+skip', 'تخطي الأغنية')
+        .addField('+pause', 'ايقاف الاغنية مؤقتا')
+        .addField('+resume', 'تكملة الاغنية')
+        .addField('+queue', 'اظهار قائمة التشغيل')
+        .addField('+np', 'اظهار الاغنية اللي انت مشغلها حاليا');
       message.author.send(helpEmbed) .then(message.channel.send('**Sent. :white_check_mark: **'))      
     }
 });
